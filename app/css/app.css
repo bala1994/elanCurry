@@ -1,0 +1,230 @@
+/* app css stylesheet */
+
+@font-face {
+  font-family: 'Yesteryear';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Yesteryear'), local('Yesteryear-Regular'), url('../fonts/yesteryear.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+.navbar-default {
+  background-color: #4CAF50 !important;
+  background-image: linear-gradient(to bottom,#4CAF50 0,#4CAF50 100%);
+  border-color: #4CAF50;
+  height:70px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  color:#fff;
+  background-color: #7FD94F;
+  font-size: 17px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.open>a {
+  background-image: none;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #fff;
+  font-size: 17px;
+}
+
+.navbar-default .navbar-brand {
+  color: #fff ;
+}
+
+.fullimage {
+  width:100%;
+  height:auto;
+}
+
+.largefont {
+  font-size: 32px;
+}
+
+.frontlight{
+  color:#7FD94F !important;
+}
+
+.navbar-nav>li>a {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.navbar-brand {
+  float: left;
+  height: 50px;
+  padding: 23px 15px;
+  font-size: 23px;
+  line-height: 20px;
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+.ownfooter {
+  height:150px;
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+
+.paddingTop10 {
+  padding-top: 10px;
+}
+
+.mediumfont {
+  font-size: 20px;
+}
+
+hr {
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+
+@media (max-width: 768px) {
+
+  .nav .navbar-nav .navbar-right > li {
+    background-color: #4CAF50;
+  }
+
+}
+.outer {
+  margin: 20px;
+}
+
+.inner {
+  list-style-type: none;
+  width: 100%;
+}
+
+.imgtitle {
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+
+.box img {
+  float: left;
+  margin: 0 15px 0 0;
+}
+
+.box p {
+  font-size:  14px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.box {
+  padding: 10px;
+  overflow: auto;
+  border-bottom: 1px solid #4CAF50;
+  border-top: 1px solid #4CAF50;
+}
+
+.box:hover {
+  background: #eee;
+  cursor: pointer;
+}
+
+.smallrow {
+  width: 40%;
+  overflow: hidden;
+  padding: 5px
+}
+
+.mediumrow {
+  width: 60%;
+  overflow: hidden;
+  padding: 5px
+}
+
+.cartbox {
+  border-radius: 12px;
+  border: 3px solid #4CAF50;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.addtocart {
+  background-color: #4CAF50;
+  color:#fff;
+  font-size: 14px;
+  border: 1px solid #4CAF50;
+}
+
+.nocursor {
+  cursor: default !important;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.inline {
+  display: inline-flex;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid #4CAF50;
+  border-collapse: collapse;
+}
+thead > tr > td, tfoot > tr > td {
+  padding: 5px;
+  text-align: left;
+  font-size: 16px;
+  color: #4CAF50;
+  font-weight: 700;
+}
+
+tbody > tr >td {
+  height:60px;
+  padding: 5px;
+  text-align: left;
+  font-size: 16px;
+  color: #000;
+}
+
+.width100 {
+  width:150px;
+}
+
+.margin10 {
+  margin: 5px;
+}

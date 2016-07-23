@@ -1,0 +1,47 @@
+<div class="container" style="margin-top: 60px;" >
+    <div style="display: inline-flex;width: 100%;">
+        <div class="mediumrow">
+            <div class="outer" >
+                <ul class="inner">
+                    <li class="box nocursor"  ng-repeat="item in items">
+                        <img src="images/1.jpg" />
+                        <h3 class="imgtitle">{{item.itemName}}<span class="pull-right">.... &#8377;{{item.cost}}</span></h3>
+                        <p>{{item.description}}</p>
+                        <input type="button" value="Add to Cart" class="addtocart pull-right cursor">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="smallrow">
+            <div class="cartbox" style="width: 100%">
+            <h1 class="frontcolor bold mediumfont">Your Cart</h1>
+            <hr style="border-top:1px solid #4CAF50">
+                <!-- No cart messgae -->
+                <p class="bold mediumfont">No items in cart</p>
+                <br>
+                <!-- One single row in cart -->
+                <div style="border: 1px solid #4CAF50;display: inline-flex">
+                    <div class="box" style="border:none;width:60%">
+                        <img src="images/4.jpg" />
+                        <p class="bold">Mutton Legs</p>
+                        <input type="button" value="Remove" style="bottom: 0" class="addtocart">
+                    </div>
+                    <div style="width:20%;">
+                        <div class="input-group" style="margin-top: 10px;">
+                            <input type="text" class="form-control">
+                               <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">+</button>
+                               </span>
+                        </div>
+                    </div>
+                    <div style="margin-top:10px;width: 20%;padding:5px">
+                        <p class="frontcolor bold pull-right">&#8377;500</p>
+                    </div>
+                </div>
+                <!-- One single row in cart -->
+            </div>
+           <a href="#/invoice" style="height: 40px;margin-top: 10px;margin-right:
+           5px;padding: 10px;" class="addtocart pull-right">Proceed to Payment</a>
+        </div>
+    </div>
+</div>

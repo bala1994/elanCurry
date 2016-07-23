@@ -1,0 +1,38 @@
+[
+  {
+    "itemName": "Mutton Fillets",
+    "description": "250 Grams (2 pieces)",
+    "cost": "150"
+  },
+ {
+    "itemName": "Mutton Chopped",
+    "description": "1KG - Medium chopped pieces with bone",
+    "cost": "500"
+  },
+ {
+    "itemName": "Mutton Chopped",
+    "description": "1KG - Medium chopped pieces boneless",
+    "cost": "700"
+  },
+ {
+    "itemName": "Mutton breast",
+    "description": "500 Grams - Best for barbeque (2 large pieces)",
+    "cost": "350"
+  },
+ {
+    "itemName": "Mutton Legs",
+    "description": "750 Grams - Medium size legs (4 pieces)",
+    "cost": "600"
+  },
+ {
+    "itemName": "Mutton Liver",
+    "description": "250 Grams (2 pieces)",
+    "cost": "150"
+  },
+ {
+    "itemName": "Goat Head",
+    "description": "500 - 750 Grams (1 piece)",
+    "cost": "450"
+  }
+
+]

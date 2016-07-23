@@ -1,0 +1,29 @@
+<div class="login-page">
+    <div class="form" ng-show="form">
+        <form class="register-form" ng-hide="login" ng-submit="register(user)" novalidate>
+            <input type="text" placeholder="Name" ng-model="user.name"/>
+            <input type="text" placeholder="Phone number" ng-model="user.phone"/>
+            <input type="text" placeholder="Email address" ng-model="user.email"/>
+            <input type="password" placeholder="Password" ng-model="user.password"/>
+            <input type="password" placeholder="Conform password" ng-model="user.cpassword"/>
+            <textarea placeholder="Address" ng-model="user.address"></textarea>
+            <input type="submit" value="SIGN UP" />
+            <p class="message">Already registered? <p class="bold cursor frontcolor" ng-click="switch()">Log In</p></p>
+        </form>
+        <form class="login-form" ng-show="login" ng-submit="login(user)" novalidate>
+            <input type="text" placeholder="Phone number" ng-model="user.phone"/>
+            <input type="password" placeholder="Password" ng-model="user.password"/>
+            <p class="cursor bold pull-right frontcolor" ng-click="forgot(true)">Forgot password?</p>
+            <input type="submit" value="LOGIN" />
+            <p class="message">Not registered? <p class="bold cursor frontcolor" ng-click="switch()">Create an account</p></p>
+        </form>
+    </div>
+    <div class="form" ng-hide="form">
+        <form class="forgot-form" ng-submit="forgotpass(user)" novalidate>
+            <input type="text" placeholder="Email address" ng-model="user.email"/>
+            <p class="frontcolor">Your password will be sent to your email</p>
+            <input type="submit" value="SEND PASSWORD" />
+            <p class="message">Remembered password? <p class="bold cursor frontcolor" ng-click="forgot(false)">Log In</p></p>
+        </form>
+    </div>
+</div>

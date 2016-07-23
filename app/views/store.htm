@@ -1,0 +1,64 @@
+﻿<div class="container" style="margin-top: 60px;" >
+    <div style="display: inline-flex;width: 100%;">
+        <div class="mediumrow">
+            <div class="outer" >
+                <ul class="inner">
+                    <li class="box nocursor" ng-repeat="product in store.products | orderBy:'name' | filter:search" >
+                        <img ng-src="images/raw/{{product.sku}}.jpg" alt="{{product.name}}" width="100" height="100" />
+                        <h3 class="imgtitle">{{product.name}}<span class="pull-right">.... &#8377;{{product.price}}</span></h3>
+                        <p>{{product.description}}</p>
+                        <input type="button" value="Add to Cart" class="addtocart pull-right cursor"
+                               ng-click="cart.addItem(product.sku, product.name, product.price, 1)">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="smallrow">
+            <div class="cartbox" style="width: 100%">
+                <h1 class="frontcolor bold mediumfont">Your Cart</h1>
+                <hr style="border-top:1px solid #4CAF50">
+                <!-- No cart messgae -->
+                <!--<p class="bold mediumfont">No items in cart</p>-->
+                <br>
+                <!-- One single row in cart -->
+                <div style="border: 1px solid #4CAF50;display: inline-flex" ng-repeat="item in cart.items | orderBy:'name'">
+                    <div class="box" style="border:none;width:100%">
+                        <img ng-src="images/raw/{{product.sku}}.jpg" alt="{{product.name}}" width="100" height="100" />
+                        <p class="bold">{{item.name}}{{item.description}}</p>
+                        <input type="button"  title="remove from cart" ng-click="cart.addItem(item.sku, item.name, item.price, -10000000)"
+                               value="Remove" style="bottom: 0" class="addtocart">
+                    </div>
+
+                    <div style="padding-top: 1%">
+                    <button class="btn btn-success" ng-disabled="item.quantity >= 1000"
+                            ng-click="cart.addItem(item.sku, item.name, item.price, +1)"/>+</button>
+                    </div>
+                    <div style="padding-top: 2%" >
+                    <center><input type="text" ng-model="item.quantity" ng-change="cart.saveItems()"/></center>
+                    </div>
+                    <div style="padding-top: 1%"><button class="btn btn-inverse" type="button" ng-disabled="item.quantity <= 1"
+                                                         ng-click="cart.addItem(item.sku, item.name, item.price, -1)">-</button>
+                   </div>
+                    <div style="margin-top:10px;width: 20%;padding:5px">
+                        <p class="frontcolor bold pull-right">&#8377;{{item.price * item.quantity}}</p>
+                    </div>
+                </div>
+                <!-- One single row in cart -->
+                <div>
+                    <div class="box" style="border:none;width:100%">
+                        <div class="col-md-3 frontcolor bold mediumfont">
+                        <p class="bold" style="font-size: 20px">Total</p> </div>
+                    <div class="col-md-3">
+                        <p class="bold" style="font-size:   16px">Quantity:{{cart.getTotalCount()}}</p></div>
+                        <div class="col-md-6">
+                        <p class="bold" style="font-size: 20px">Price:&#8377;{{cart.getTotalPrice()}}</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="index.html#/cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1"
+               style="height: 40px;margin-top: 10px;margin-right:
+           5px;padding: 10px;" class="addtocart pull-right">Proceed to Payment</a>
+        </div>
+    </div>
+</div>
